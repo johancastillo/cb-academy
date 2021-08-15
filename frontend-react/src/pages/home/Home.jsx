@@ -1,3 +1,4 @@
+import BannerParallax from "../../components/banner-parallax/BannerParallax.jsx"
 import Counter from "../../components/counter/Counter.jsx"
 import CoursesCarousel from "../../components/courses-carousel/CoursesCarousel.jsx"
 import Header from "../../components/header/Header.jsx"
@@ -14,6 +15,8 @@ const Home = () => {
             <Counter />
             
             <TeacherCarousel />
+
+            <BannerParallax />
 
             <CoursesCarousel />
             <CoursesCarousel />

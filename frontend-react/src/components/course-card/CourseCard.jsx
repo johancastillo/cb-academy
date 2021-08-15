@@ -38,7 +38,7 @@ const CourseCard = () => {
 
             <div className="card-footer">
                 <div className="teacher-box">
-                    <img src="assets/images/teachers/1.jpg" className="img-teacher" alt="" />
+                    <img src="assets/images/teachers/01.jpg" className="img-teacher" alt="" />
                     <span>Johan Castillo</span>
                 </div>
 
