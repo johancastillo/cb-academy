@@ -1,0 +1,86 @@
+/* Fonts */
+/* Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Alegreya */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap');
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Bebas Neue";
+}
+
+p, span{
+  font-family: Alegreya;
+}
+
+button{
+  font-family: "Bebas Neue";
+}
+
+.navbar a{
+  font-family: "Bebas Neue";
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #77a1fb;
+  padding: 0 40px;
+}
+
+header h1{
+  color: #fff;
+}
+
+header p{
+  font-size: 20px;
+}
+
+header .content{
+  width: 40%;
+}
+
+.counter{
+  padding: 20px;
+}
+
+.counter-card{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.counter-card p{
+  margin: 0;
+  margin-left: 10px;
+}
+
+.course-card{
+  width: 260px;
+  border-radius: 10px 10px 4px 4px;
+  display: inline-block;
+  margin: 20px 15px;
+  transition: transform 0.25s;
+}
+
+.course-card:hover{
+  transform: scale(1.1);
+}
+
+.course-card .img-course{
+  border-radius: 10px 10px 0 0;
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-teacher{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
