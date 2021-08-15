@@ -1,0 +1,36 @@
+.course-card{
+    width: 260px;
+    border-radius: 10px 10px 4px 4px;
+    display: inline-block;
+    margin: 20px 15px;
+    transition: transform 0.25s;
+}
+
+.course-card:hover{
+    transform: scale(1.1);
+}
+
+.course-card .img-course{
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.course-card h5{
+    cursor: pointer;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.course-card .img-teacher{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.course-card .teacher-box{
+    cursor: pointer;
+}

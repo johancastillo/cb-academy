@@ -1,14 +1,20 @@
-
+import { Link } from "wouter"
+import "./CourseCard.css"
 
 const CourseCard = () => {
     return (
         <div className="course-card card">
-            <img src="assets/images/courses/course-css.jpg" className="card-img-top img-course" alt="..." />
+            <Link to="/cursos/1">
+                <img src="assets/images/courses/course-css.jpg" className="card-img-top img-course" alt="..." />
+            </Link>
 
             <div className="card-body">
-                <h5 className="card-title">
-                    Introducción a CSS3
-                </h5>
+                <Link to="/cursos/1">
+
+                    <h5 className="card-title">
+                        Introducción a CSS3
+                    </h5>
+                </Link>
 
                 <div className="item">
                     <img src="assets/icons/time.svg" width="20px" alt="" />
@@ -31,7 +37,7 @@ const CourseCard = () => {
             </div>
 
             <div className="card-footer">
-                <div className="">
+                <div className="teacher-box">
                     <img src="assets/images/teachers/1.jpg" className="img-teacher" alt="" />
                     <span>Johan Castillo</span>
                 </div>
