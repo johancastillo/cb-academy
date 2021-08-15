@@ -2,13 +2,13 @@
 
 const Counter = () => {
     return (
-        <div class="counter container">
-            <div class="row">
+        <div className="counter container">
+            <div className="row">
 
-                <div class="col-md-4">
-                    <div class="counter-card card">
+                <div className="col-md-4">
+                    <div className="counter-card card">
 
-                        <div class="icon">
+                        <div className="icon">
                             <img src="assets/icons/slideshow.svg" width="30px" alt="" />
                         </div>
 
@@ -19,10 +19,10 @@ const Counter = () => {
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="counter-card card">
+                <div className="col-md-4">
+                    <div className="counter-card card">
 
-                        <div class="icon">
+                        <div className="icon">
                             <img src="assets/icons/slideshow.svg" width="30px" alt="" />
                         </div>
 
@@ -33,10 +33,10 @@ const Counter = () => {
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="counter-card card">
+                <div className="col-md-4">
+                    <div className="counter-card card">
 
-                        <div class="icon">
+                        <div className="icon">
                             <img src="assets/icons/slideshow.svg" width="30px" alt="" />
                         </div>
 

@@ -3,7 +3,7 @@
 const Header = () => {
     return (
         <header>
-            <div class="content">
+            <div className="content">
                 <h1>Domina las carreras del futuro</h1>
 
                 <p>
@@ -12,11 +12,11 @@ const Header = () => {
 
                 <p>¡Tú puedes ser el próximo!</p>
 
-                <button class="btn btn-outline-dark">Más información</button>
+                <button className="btn btn-outline-dark">Más información</button>
 
             </div>
 
-            <div class="image">
+            <div className="image">
                 <img src="assets/images/hero-img.png" width="100%" alt="" />
             </div>
         </header>

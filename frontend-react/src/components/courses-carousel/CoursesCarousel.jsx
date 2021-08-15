@@ -1,36 +1,58 @@
 import CourseCard from "../../components/course-card/CourseCard.jsx"
 import "./CoursesCarousel.css"
 
-let carousel = document.getElementById("carousel-courses")
 
-const moveToLeft = () => {
-    carousel.scrollBy(-290, 0)
+const moveToLeft = e => {
+    //coursesList.scrollBy(-290, 0)
+    let element = e.target.parentNode
+
+    while(!element.id.includes("carousel")){
+        element = element.parentNode
+    }
+
+    
+    console.log("Truee!")
+    let listEl = element.getElementsByClassName("courses-list")[0]
+    console.log(listEl)
+    listEl.scrollBy(-290, 0)
+    
 }
 
-const moveToRight = () => {
-    carousel.scrollBy(290, 0)
+const moveToRight = e => {
+    //coursesList.scrollBy(290, 0)
+    let element = e.target.parentNode
+
+    while(!element.id.includes("carousel")){
+        element = element.parentNode
+    }
+
+    
+    console.log("Truee!")
+    let listEl = element.getElementsByClassName("courses-list")[0]
+    console.log(listEl)
+    listEl.scrollBy(290, 0)
 }
 
 const CoursesCarousel = () => {
     return (
-        <div class="container my-5">
+        <div className="container my-5" id="carousel">
 
             <div className="controls">
                 <h3>Cursos populares</h3>
 
                 <div className="btns">
 
-                    <button className="btn btn-primary" onClick={moveToLeft}>
+                    <button className="btn btn-primary" onClick={e => moveToLeft(e)}>
                         <img src="assets/icons/chevron-left.svg" alt="" />
                     </button>
 
-                    <button className="btn btn-primary" onClick={moveToRight}>
+                    <button className="btn btn-primary" onClick={e => moveToRight(e)}>
                         <img src="assets/icons/chevron-right.svg" alt="" />
                     </button>
                 </div>
             </div>
 
-            <div class="carousel-courses" id="carousel-courses">
+            <div className="carousel-courses courses-list">
 
                 <CourseCard />
                 <CourseCard />
