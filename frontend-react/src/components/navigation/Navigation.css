@@ -1,3 +1,75 @@
+.navbar{
+    position: fixed;
+    width: 100%;
+    background: transparent !important;
+    transition: background 1s;
+    z-index: 9999;
+}
+
+.navbar li a{
+    color: #fff !important;
+}
+
+.navbar.active{
+    background: #fff !important;
+}
+
+.navbar.active li a{
+    color: #000 !important;
+}
+
 .logo{
     cursor: pointer;
+}
+
+.btns-auth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-register{
+    margin-left: 10px;
+    background: #fff;
+    border: 2px solid #fff;
+    color: #001e5e;
+}
+
+.btn-login{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.navbar.active .btn-register{
+    background: #001e5e;
+    border: 2px solid #001e5e;
+    color: #fff;
+}
+
+.navbar.active .btn-login{
+    background: transparent;
+    border: 2px solid #001e5e;
+    color: #001e5e;
+}
+
+
+.popup-auth{
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 95%;
+    height: 90vh;
+    background: red;
+
+    border-radius: 8px;
+}
+
+.popup-auth.active{
+    display: flex;
 }

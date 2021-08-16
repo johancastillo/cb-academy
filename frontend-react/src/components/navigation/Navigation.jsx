@@ -1,15 +1,45 @@
+import { useEffect } from "react"
+
 import { Link } from "wouter"
 import "./Navigation.css"
 
+const openForm = option => {
+    const popupAuth = document.getElementById("popup-auth");
+
+    popupAuth.classList.toggle("active")
+}
+
+
 const Navigation = () => {
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            
+            const scrollSize = window.scrollY;
+            const navigation = document.getElementById("navigation")
+            const logo = document.getElementById("logo")
+
+            if(scrollSize > 5){
+                navigation.classList.add("active")
+                logo.src = "assets/images/logo.svg"
+            }else{
+                navigation.classList.remove("active")
+                logo.src = "assets/images/logo-white.svg"
+            }
+    
+        });
+    
+    }, [])
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light" id="navigation">
             <div className="container-fluid">
 
 
                 <Link to="/" className="logo">
                     <a>
-                    <img  src="assets/images/logo.svg" alt="" width="60px" height="auto" className="d-inline-block align-text-top" />
+                        <img id="logo" src="assets/images/logo-white.svg" alt="" width="60px" height="auto" className="d-inline-block align-text-top" />
                     </a>
 
                 </Link>
@@ -47,6 +77,33 @@ const Navigation = () => {
                         </li>
 
                         <li className="nav-item">
+                            <Link to="/cursos">
+
+                                <a className="nav-link">
+                                    Especialidades
+                                </a>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/cursos">
+
+                                <a className="nav-link">
+                                    Talleres
+                                </a>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/cursos">
+
+                                <a className="nav-link">
+                                    Rutas
+                                </a>
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
                             <Link to="/contacto">
 
                                 <a className="nav-link">
@@ -57,8 +114,33 @@ const Navigation = () => {
 
                     </ul>
                 </div>
+
+                <div className="btns-auth">
+                    <button className="btn btn-outline-primary btn-login" onClick={() => openForm("login")}>
+                        Iniciar sesión
+                    </button>
+
+                    <button className="btn btn-primary btn-register" onClick={() => openForm("register")}>
+                        !Registráte!
+                    </button>
+                </div>
+
             </div>
+
+
         </nav>
+
+        <div className="popup-auth" id="popup-auth">
+            <div className="image">
+                <img src="" alt="" />
+            </div>
+
+            <div className="form">
+
+            </div>
+        </div>
+
+        </>
     )
 }
 

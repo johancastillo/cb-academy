@@ -1,8 +1,8 @@
-
+import "./Header.css"
 
 const Header = () => {
     return (
-        <header>
+        <header style={{"background-image": "url('assets/images/header-background.png')"}}>
             <div className="content">
                 <h1>Domina las carreras del futuro</h1>
 
@@ -12,12 +12,14 @@ const Header = () => {
 
                 <p>¡Tú puedes ser el próximo!</p>
 
-                <button className="btn btn-outline-dark">Más información</button>
+                <button className="btn btn-outline-white">
+                    Comienza gratis
+                </button>
 
             </div>
 
             <div className="image">
-                <img src="assets/images/hero-img.png" width="100%" alt="" />
+                <img src="assets/images/hero-img.png" width="380px" alt="" />
             </div>
         </header>
     )
